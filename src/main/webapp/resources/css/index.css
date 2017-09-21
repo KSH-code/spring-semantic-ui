@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+/*
+	제목 
+ */
+h3.grey.header {
+	padding-left: 5px !important;
+	border: 0 !important;
+}
+
+/*
+	제목 구분선
+ */
+.ui.divider {
+	margin-top: 0;
+}
+
+/*
+	글 목록 감싸주는 거 패딩
+ */
+.ui.cards {
+	padding: 5px;
+}
+
+/*
+	글들 호버 효과
+ */
+.ui.cards>.card {
+	width: 98% !important;
+	transition: all .1s;
+	box-shadow: none !important;
+}
+
+.ui.cards>.card:hover {
+	width: 100% !important;
+	box-shadow: 0px 5px 20px #d4d4d5 !important;
+}
+
+/*
+	이름
+ */
+.header {
+	display: inline-block !important;
+	margin-bottom: 10px;
+}
+/*
+	이름
+ */
+.name {
+	float: right;
+}

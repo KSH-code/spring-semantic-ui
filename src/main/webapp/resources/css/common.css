@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+.block {
+	display: block;
+}
+
+.clear_both {
+	claer: both;
+}
+
+.mobile_menu {
+	position: fixed;
+	width: 100%;
+}
+/*
+	글 작성자 이름
+*/
+.color_a {
+	color: #c0c0c0;
+}
+
+#skip header a div.item {
+	color: #fff;
+}
+
+#skip header a div.item:before {
+	display: none;
+}
+
+.color_black {
+	color: #232323 !important;
+}
+
+#wrapper {
+	padding-top: 3em;
+}
+
+#user_form {
+	max-width: 600px;
+	margin: 0 auto !important;
+}
