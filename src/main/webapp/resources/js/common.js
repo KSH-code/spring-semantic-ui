@@ -2,9 +2,8 @@
  * 
  */
 const slide_time = 250
-
 const host = 'http://192.168.0.41:8080'
-
+	
 var menu = false
 $(function(){window.addEventListener("resize", ()=>{resizeWindow()})
 resizeWindow()
@@ -60,5 +59,46 @@ function slideUp(obj){
  */
 const formSuccess = function(form){
 	ajax(form)
+}
+/**
+ * 
+ * @param url
+ *            api 서버의 uri
+ * @param data
+ *            ajax로 보낼 data
+ * @param callback
+ *            success일시 작동할 callback method
+ */
+function get(uri,data,callback){
+	$.ajax({
+		xhrFields : {
+			withCredentials : true
+		},
+		url : host + uri,
+		type : 'get',
+		data,
+		success : callback
+	})
+}
+
+/**
+ * 
+ * @param url
+ *            api 서버의 uri
+ * @param data
+ *            ajax로 보낼 data
+ * @param callback
+ *            success일시 작동할 callback method
+ */
+function post(uri,data,callback){
+	$.ajax({
+		xhrFields : {
+			withCredentials : true
+		},
+		url : host + uri,
+		type : 'post',
+		data,
+		success : callback
+	})
 }
 

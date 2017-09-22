@@ -46,12 +46,22 @@
 		},
 		inline : true,
 		on : 'blur',
-		onSuccess: function(){formSuccess(this)}
+		onSuccess : function() {
+			formSuccess(this)
+		}
 	})
 	function ajax(form) {
-		$.post(`${getHost()}/login`, $(form).serialize(), data=>{
-			console.log(data)
-		})
+		post('/login', $(form).serialize(), function(data) {
+			switch (data.return_type) {
+			case 1:
+				alert('성공');
+				history.back();
+				break;
+			default:
+				alert('이메일이나 비밀번호를 확인해 주세요.');
+				break;
+			}
+		});
 	}
 </script>
 <!-- onsubmit="return register(this)"-->

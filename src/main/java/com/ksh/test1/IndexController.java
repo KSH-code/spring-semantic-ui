@@ -39,15 +39,26 @@ public class IndexController {
 		return "login";
 	}
 
-//	@RequestMapping(value = "/register")
-//	public void Register(HttpServletRequest request, HttpServletResponse response) {
-//		System.out.println(request.getParameter("user_email"));
-//		try {
-//			response.getWriter().write("{\"return_type\":1}");
-//			response.getWriter().flush();
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//	}
+	@RequestMapping(value = "/logout", method = RequestMethod.GET)
+	public String logout() {
+		return "logout";
+	}
+
+	@RequestMapping(value = "/board/write", method = RequestMethod.GET)
+	public String write() {
+		return "board/write";
+	}
+
+	// @RequestMapping(value = "/register")
+	// public void Register(HttpServletRequest request, HttpServletResponse
+	// response) {
+	// System.out.println(request.getParameter("user_email"));
+	// try {
+	// response.getWriter().write("{\"return_type\":1}");
+	// response.getWriter().flush();
+	// } catch (IOException e) {
+	// // TODO Auto-generated catch block
+	// e.printStackTrace();
+	// }
+	// }
 }

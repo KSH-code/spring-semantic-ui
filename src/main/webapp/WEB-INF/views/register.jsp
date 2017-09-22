@@ -61,13 +61,23 @@
 			},
 		},
 		inline : true,
-		on : 'blur', 
-		onSuccess: function(){formSuccess(this)}
+		on : 'blur',
+		onSuccess : function() {
+			formSuccess(this)
+		}
 	})
 	function ajax(form) {
-		$.post(host+`/register`, $(form).serialize(), data=>{
-			console.log(data)
-		})
+		post('/register', $(form).serialize(), function(data) {
+			switch (data.return_type) {
+			case 1:
+				alert("성공 하셨습니다");
+				location.href = '/';
+				break;
+			default:
+				alert("중복된 이메일 입니다.");
+				break;
+			}
+		});
 	}
 </script>
 <!-- onsubmit="return register(this)"-->

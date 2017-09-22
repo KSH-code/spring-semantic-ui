@@ -39,3 +39,11 @@
 	max-width: 600px;
 	margin: 0 auto !important;
 }
+
+header .button {
+	border-radius: 0px !important;
+}
+
+header .right.menu>* {
+	margin: 0;
+}
